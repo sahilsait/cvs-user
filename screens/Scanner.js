@@ -57,7 +57,7 @@ export default function Scanner({ navigation }) {
       <View>
         {scanned && (
           <Button
-            title="Get Deets"
+            title="Get Details"
             onPress={() => {
               navigation.navigate("Details", {
                 address: text,
@@ -71,7 +71,9 @@ export default function Scanner({ navigation }) {
         {scanned && (
           <Button
             title="Scan again?"
-            onPress={() => setScanned(false)}
+            onPress={() => {
+              setScanned(false);
+            }}
             color="tomato"
           />
         )}
@@ -98,6 +100,5 @@ const styles = StyleSheet.create({
     width: 300,
     overflow: "hidden",
     borderRadius: 30,
-    backgroundColor: "tomato",
   },
 });
